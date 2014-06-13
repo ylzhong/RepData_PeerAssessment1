@@ -115,6 +115,8 @@ head(data2)
 ## 5    NA 2012-10-01       20
 ## 6    NA 2012-10-01       25
 ```
+My way of filling in missing values are replacing missing value with mean of that 5-min time interval. I already have a dataframe with all the means and I matched missing value with its 
+corresponding mean using "interval". 
 
 ```r
 #fill missing value with mean of that 5- min time interval
@@ -139,7 +141,7 @@ head(data2)
 
 ```r
 na_new <- sum(is.na(data2$steps))
-cat("totoal number of rows with NAs in the new dataset : ", na_new)
+cat("total number of rows with NAs in the new dataset : ", na_new)
 ```
 
 ```
